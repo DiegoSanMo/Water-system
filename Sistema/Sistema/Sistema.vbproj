@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16FFF5E6-D350-4BA7-B2F6-2C28377E1EDD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sistema.My.MyApplication</StartupObject>
+    <RootNamespace>Sistema</RootNamespace>
+    <AssemblyName>Sistema</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Sistema.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Sistema.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetSistema.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetSistema.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Pagos\DetallesConsultaPago.Designer.vb">
+      <DependentUpon>DetallesConsultaPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Pagos\DetallesConsultaPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoCalles.Designer.vb">
+      <DependentUpon>frmCatalogoCalles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoCalles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoCuentas.Designer.vb">
+      <DependentUpon>frmCatalogoCuentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoCuentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoEmpleados.Designer.vb">
+      <DependentUpon>frmCatalogoEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoGastos.Designer.vb">
+      <DependentUpon>frmCatalogoGastos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoGastos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoMateriales.Designer.vb">
+      <DependentUpon>frmCatalogoMateriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoMateriales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoPozos.Designer.vb">
+      <DependentUpon>frmCatalogoPozos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoPozos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoProveedores.Designer.vb">
+      <DependentUpon>frmCatalogoProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoServicios.Designer.vb">
+      <DependentUpon>frmCatalogoServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoServicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoSituacion.Designer.vb">
+      <DependentUpon>frmCatalogoSituacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoSituacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoTarifas.Designer.vb">
+      <DependentUpon>frmCatalogoTarifas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\frmCatalogoTarifas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Salida materiales\frmDetalleSalidaMateriales.Designer.vb">
+      <DependentUpon>frmDetalleSalidaMateriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Salida materiales\frmDetalleSalidaMateriales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Compra materiales\frmMovimientoCompraMaterialesConsultaID.Designer.vb">
+      <DependentUpon>frmMovimientoCompraMaterialesConsultaID.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Compra materiales\frmMovimientoCompraMaterialesConsultaID.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Pagos\frmMovimientoConsultaPago.Designer.vb">
+      <DependentUpon>frmMovimientoConsultaPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Pagos\frmMovimientoConsultaPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Salida materiales\frmMovimientoConsultaSalidaMateriales.Designer.vb">
+      <DependentUpon>frmMovimientoConsultaSalidaMateriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Salida materiales\frmMovimientoConsultaSalidaMateriales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Pagos\frmMovimientoPago.Designer.vb">
+      <DependentUpon>frmMovimientoPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Pagos\frmMovimientoPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Actividad pozos\frmMovimientosActividadPozos.Designer.vb">
+      <DependentUpon>frmMovimientosActividadPozos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Actividad pozos\frmMovimientosActividadPozos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Salida materiales\frmMovimientoSalidaMateriales.Designer.vb">
+      <DependentUpon>frmMovimientoSalidaMateriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Salida materiales\frmMovimientoSalidaMateriales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Compra materiales\frmMovimientosCompraMateriales.Designer.vb">
+      <DependentUpon>frmMovimientosCompraMateriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Compra materiales\frmMovimientosCompraMateriales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Compra materiales\frmMovimientosCompraMaterialesConsultas.Designer.vb">
+      <DependentUpon>frmMovimientosCompraMaterialesConsultas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Compra materiales\frmMovimientosCompraMaterialesConsultas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Gastos realizados\frmMovimientosGastosRealizados.Designer.vb">
+      <DependentUpon>frmMovimientosGastosRealizados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Gastos realizados\frmMovimientosGastosRealizados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\BuscarCliente.Designer.vb">
+      <DependentUpon>BuscarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\BuscarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReporteParametros.Designer.vb">
+      <DependentUpon>frmReporteParametros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteParametros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmReportes.Designer.vb">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Movimientos\Pagos\DetallesConsultaPago.resx">
+      <DependentUpon>DetallesConsultaPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoCalles.resx">
+      <DependentUpon>frmCatalogoCalles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoCuentas.resx">
+      <DependentUpon>frmCatalogoCuentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoEmpleados.resx">
+      <DependentUpon>frmCatalogoEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoGastos.resx">
+      <DependentUpon>frmCatalogoGastos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoMateriales.resx">
+      <DependentUpon>frmCatalogoMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoPozos.resx">
+      <DependentUpon>frmCatalogoPozos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoProveedores.resx">
+      <DependentUpon>frmCatalogoProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoServicios.resx">
+      <DependentUpon>frmCatalogoServicios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoSituacion.resx">
+      <DependentUpon>frmCatalogoSituacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\frmCatalogoTarifas.resx">
+      <DependentUpon>frmCatalogoTarifas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Salida materiales\frmDetalleSalidaMateriales.resx">
+      <DependentUpon>frmDetalleSalidaMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Compra materiales\frmMovimientoCompraMaterialesConsultaID.resx">
+      <DependentUpon>frmMovimientoCompraMaterialesConsultaID.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Pagos\frmMovimientoConsultaPago.resx">
+      <DependentUpon>frmMovimientoConsultaPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Salida materiales\frmMovimientoConsultaSalidaMateriales.resx">
+      <DependentUpon>frmMovimientoConsultaSalidaMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Pagos\frmMovimientoPago.resx">
+      <DependentUpon>frmMovimientoPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Actividad pozos\frmMovimientosActividadPozos.resx">
+      <DependentUpon>frmMovimientosActividadPozos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Salida materiales\frmMovimientoSalidaMateriales.resx">
+      <DependentUpon>frmMovimientoSalidaMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Compra materiales\frmMovimientosCompraMateriales.resx">
+      <DependentUpon>frmMovimientosCompraMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Compra materiales\frmMovimientosCompraMaterialesConsultas.resx">
+      <DependentUpon>frmMovimientosCompraMaterialesConsultas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Gastos realizados\frmMovimientosGastosRealizados.resx">
+      <DependentUpon>frmMovimientosGastosRealizados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\BuscarCliente.resx">
+      <DependentUpon>BuscarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReporteParametros.resx">
+      <DependentUpon>frmReporteParametros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReportes.resx">
+      <DependentUpon>frmReportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\HistorialPagoCliente.rdlc" />
+    <EmbeddedResource Include="Reportes\EntradasPorPeriodo.rdlc" />
+    <EmbeddedResource Include="Reportes\ActPozosPer.rdlc" />
+    <EmbeddedResource Include="Reportes\ClientesMorosos.rdlc" />
+    <EmbeddedResource Include="Reportes\ServiciosPer.rdlc" />
+    <EmbeddedResource Include="Reportes\Servicios.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteProveedores.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportePagosPer.rdlc" />
+    <EmbeddedResource Include="Reportes\SalidaMaterialesPer.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCuentasCalles.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteGastosPorPer.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportePozos.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteTarifas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteGasto.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteEmpleados.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteMateriales.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCalles.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteCuentas.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSetSistema.xsc">
+      <DependentUpon>DataSetSistema.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetSistema.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetSistema.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetSistema.xss">
+      <DependentUpon>DataSetSistema.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Property_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit Sign_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checked-48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
